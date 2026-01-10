@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.feed {
+  max-width: 420px;
+  margin: auto;
+}
+
+.post {
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post img,
+.post video {
+  width: 100%;
+  display: block;
+}
+
+.actions {
+  padding: 10px;
+}
+
+.actions button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  margin-right: 10px;
+}
+
+.caption {
+  padding: 0 10px 10px;
+}

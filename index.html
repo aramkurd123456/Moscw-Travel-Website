@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Feed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🌍 Travel Moments</header>
+
+<main class="feed">
+
+  <!-- Post 1: Image -->
+  <article class="post">
+    <img src="assets/photos/beach.jpg">
+    <div class="actions">
+      <button>❤️</button>
+      <button onclick="sharePost()">📤</button>
+    </div>
+    <p class="caption">Sunset at the beach 🌅</p>
+  </article>
+
+  <!-- Post 2: Video -->
+  <article class="post">
+    <video controls>
+      <source src="assets/videos/hiking.mp4" type="video/mp4">
+    </video>
+    <div class="actions">
+      <button>❤️</button>
+      <button onclick="sharePost()">📤</button>
+    </div>
+    <p class="caption">Mountain hiking adventure 🏔</p>
+  </article>
+
+</main>
+
+<script>
+function sharePost() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Travel Feed',
+      text: 'Check out this travel moment!',
+      url: window.location.href
+    });
+  } else {
+    alert("Sharing not supported on this browser.");
+  }
+}
+</script>
+
+</body>
+</html>
